@@ -7,7 +7,7 @@ require("dotenv").config();
 const app = express();
 const server = http.createServer(app);
 
-const frontendUrl = "https://app.netlify.com/projects/unimatek/overview";
+const frontendUrl = "https://unimatek.netlify.app/";
 
 const io = require("socket.io")(server, {
   cors: { origin: frontendUrl, methods: ["GET", "POST"] }
