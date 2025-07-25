@@ -7,13 +7,18 @@ require("dotenv").config();
 const app = express();
 const server = http.createServer(app);
 
-const frontendUrl = "https://unimatek.netlify.app/";
+// ✅ Correct frontend URL (no trailing slash)
+const frontendUrl = "https://unimatek.netlify.app";
 
+// ✅ CORS for socket.io
 const io = require("socket.io")(server, {
-  cors: { origin: frontendUrl, methods: ["GET", "POST"] }
+  cors: {
+    origin: frontendUrl,
+    methods: ["GET", "POST"]
+  }
 });
 
-// Middleware
+// ✅ CORS middleware for API
 app.use(cors({
   origin: frontendUrl,
   methods: ["GET", "POST", "PUT", "DELETE"],
@@ -22,19 +27,19 @@ app.use(cors({
 
 app.use(express.json());
 
-// Add this simple root route to respond on GET /
+// ✅ Test route
 app.get("/", (req, res) => {
   res.send("Server is running");
 });
 
-// Routes (Updated to use the combined routes/index.js)
-const mainRouter = require("./routes"); // Imports routes/index.js
-app.use("/api", mainRouter); // All routes now start with /api
+// ✅ Load API routes
+const mainRouter = require("./routes");
+app.use("/api", mainRouter);
 
-// Socket.io for chat
+// ✅ Socket.io chat setup
 io.on("connection", (socket) => {
   console.log("User connected:", socket.id);
-  
+
   socket.on("joinRoom", (room) => {
     socket.join(room);
     console.log(`User ${socket.id} joined room ${room}`);
@@ -50,7 +55,7 @@ io.on("connection", (socket) => {
   });
 });
 
-// Database connection
+// ✅ Connect to MongoDB and start server
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log("MongoDB connected");
