@@ -54,43 +54,41 @@ UniMate is a full-stack MERN web application designed to support university stud
 
 ---
 ## 🧪 API Endpoints
-Auth
+**Auth**
 POST /api/auth/register
 POST /api/auth/login
 
-Tutoring
+**Tutoring**
 GET /api/tutoring
 POST /api/tutoring (protected)
 GET /api/tutoring/mine (protected)
 
-Resources
+**Resources**
 GET /api/resources
 POST /api/resources (with file upload)
 
-Textbooks
+**Textbooks**
 GET /api/textbooks
 POST /api/textbooks (protected)
 
 ## ⚙️ Deployment
-Backend on Render
+**Backend on Render**
 Push unimate-backend to GitHub.
-
 Go to Render, create a new Web Service.
-
 Set environment variables (.env).
-
 Add build command: npm install
-
 Add start command: npm run dev or node server.js
 
-Frontend on Netlify
+**Frontend on Netlify**
 Push unimate-frontend to GitHub.
-
 Go to Netlify, link the repo.
-
 Set REACT_APP_API_URL as an environment variable.
-
 Build command: npm run build
-
 Publish directory: build
 
+
+## 📫 Contact
+Gmail: Katlegokatzu@gmail.com
+
+## Developer
+**Katlego Lesetedi**
