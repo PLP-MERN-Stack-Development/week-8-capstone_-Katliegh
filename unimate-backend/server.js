@@ -7,10 +7,10 @@ require("dotenv").config();
 const app = express();
 const server = http.createServer(app);
 
-// ✅ Correct frontend URL (no trailing slash)
+// Set Netlify frontend domain (no trailing slash)
 const frontendUrl = "https://unimatek.netlify.app";
 
-// ✅ CORS for socket.io
+// Socket.io setup with CORS
 const io = require("socket.io")(server, {
   cors: {
     origin: frontendUrl,
@@ -18,25 +18,25 @@ const io = require("socket.io")(server, {
   }
 });
 
-// ✅ CORS middleware for API
+// Enable CORS for API
 app.use(cors({
   origin: frontendUrl,
   methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true,
+  credentials: true
 }));
 
 app.use(express.json());
 
-// ✅ Test route
+// Root route to test server
 app.get("/", (req, res) => {
   res.send("Server is running");
 });
 
-// ✅ Load API routes
+// Import and use all routes under /api
 const mainRouter = require("./routes");
 app.use("/api", mainRouter);
 
-// ✅ Socket.io chat setup
+// Socket.io chat logic
 io.on("connection", (socket) => {
   console.log("User connected:", socket.id);
 
@@ -55,7 +55,7 @@ io.on("connection", (socket) => {
   });
 });
 
-// ✅ Connect to MongoDB and start server
+// Connect to MongoDB and start the server
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log("MongoDB connected");
