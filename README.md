@@ -1,52 +1,96 @@
-# MERN Stack Capstone Project
+# 🎓 UniMate
 
-This assignment focuses on designing, developing, and deploying a comprehensive full-stack MERN application that showcases all the skills you've learned throughout the course.
+UniMate is a full-stack MERN web application designed to support university students and tutors. It offers:
 
-## Assignment Overview
+- 📚 **Tutoring Listings** – Post or find tutoring help.
+- 🛍️ **Textbook Marketplace** – Buy or sell used textbooks.
+- 🧾 **Study Resource Sharing** – Upload/download helpful documents.
+- 👥 **User Authentication** – Register as a student or tutor.
+- 💬 **Real-time Chat** (via Socket.io).
+- ☁️ **Deployed on**: Render (backend) & Netlify (frontend)
 
-You will:
-1. Plan and design a full-stack MERN application
-2. Develop a robust backend with MongoDB, Express.js, and Node.js
-3. Create an interactive frontend with React.js
-4. Implement testing across the entire application
-5. Deploy the application to production
+---
 
-## Getting Started
+## 🛠 Tech Stack
 
-1. Accept the GitHub Classroom assignment
-2. Clone the repository to your local machine
-3. Follow the instructions in the `Week8-Assignment.md` file
-4. Plan, develop, and deploy your capstone project
+**Frontend:**
+- React.js
+- React Router
+- Axios
+- Netlify (deployment)
 
-## Files Included
+**Backend:**
+- Node.js
+- Express
+- MongoDB (Atlas)
+- Mongoose
+- Multer (file uploads)
+- Socket.io (chat)
+- Render (deployment)
 
-- `Week8-Assignment.md`: Detailed assignment instructions
+---
 
-## Requirements
+## 📁 Features
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Git and GitHub account
-- Accounts on deployment platforms (Render/Vercel/Netlify/etc.)
+### ✅ Students
+- View tutoring offers
+- Browse and search textbooks
+- Download study resources
+- Chat with tutors
+- Register/login securely
 
-## Project Ideas
+### ✅ Tutors
+- Post tutoring services
+- Upload study materials
+- Manage personal listings
+- Receive messages from students
 
-The `Week8-Assignment.md` file includes several project ideas, but you're encouraged to develop your own idea that demonstrates your skills and interests.
+---
 
-## Submission
+## 🚀 Live Demo
 
-Your project will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+- Frontend: [https://your-netlify-app.netlify.app](https://unimatek.netlify.app/)
+- Backend API: [https://your-backend.onrender.com/api](https://week-8-capstone-katliegh.onrender.com/api)
 
-1. Commit and push your code regularly
-2. Include comprehensive documentation
-3. Deploy your application and add the live URL to your README.md
-4. Create a video demonstration and include the link in your README.md
+---
+## 🧪 API Endpoints
+Auth
+POST /api/auth/register
+POST /api/auth/login
 
-## Resources
+Tutoring
+GET /api/tutoring
+POST /api/tutoring (protected)
+GET /api/tutoring/mine (protected)
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [Express.js Documentation](https://expressjs.com/)
-- [React Documentation](https://react.dev/)
-- [Node.js Documentation](https://nodejs.org/en/docs/)
-- [GitHub Classroom Guide](https://docs.github.com/en/education/manage-coursework-with-github-classroom) 
+Resources
+GET /api/resources
+POST /api/resources (with file upload)
+
+Textbooks
+GET /api/textbooks
+POST /api/textbooks (protected)
+
+## ⚙️ Deployment
+Backend on Render
+Push unimate-backend to GitHub.
+
+Go to Render, create a new Web Service.
+
+Set environment variables (.env).
+
+Add build command: npm install
+
+Add start command: npm run dev or node server.js
+
+Frontend on Netlify
+Push unimate-frontend to GitHub.
+
+Go to Netlify, link the repo.
+
+Set REACT_APP_API_URL as an environment variable.
+
+Build command: npm run build
+
+Publish directory: build
+
