@@ -6,12 +6,20 @@ require("dotenv").config();
 
 const app = express();
 const server = http.createServer(app);
+
+const frontendUrl = "https://app.netlify.com/projects/unimatek/overview";
+
 const io = require("socket.io")(server, {
-  cors: { origin: "*" }
+  cors: { origin: frontendUrl, methods: ["GET", "POST"] }
 });
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: frontendUrl,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
+}));
+
 app.use(express.json());
 
 // Add this simple root route to respond on GET /

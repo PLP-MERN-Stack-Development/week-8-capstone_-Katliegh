@@ -1,7 +1,10 @@
+// src/api/axios.js
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://week-8-capstone-katliegh.onrender.com", // ✅ NOT localhost
+  withCredentials: false, // optional depending on cookies
 });
 
 export default instance;
+
