@@ -51,7 +51,9 @@ UniMate is a full-stack MERN web application designed to support university stud
 
 - Frontend: [https://your-netlify-app.netlify.app](https://unimatek.netlify.app/)
 - Backend API: [https://your-backend.onrender.com/api](https://week-8-capstone-katliegh.onrender.com/api)
-
+---
+## Pitchdeck Link
+(https://www.canva.com/design/DAGk11-7cYg/B2mK4m72H7Qs6fgSBtjQXw/view?utm_content=DAGk11-7cYg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h93804ada74)
 ---
 ## 🧪 API Endpoints
 **Auth**
