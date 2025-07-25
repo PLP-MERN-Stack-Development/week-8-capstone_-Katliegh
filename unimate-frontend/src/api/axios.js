@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "https://week-8-capstone-katliegh.onrender.com", // ✅ NOT localhost
+  baseURL: "https://week-8-capstone-katliegh.onrender.com/api", // ✅ NOT localhost
   withCredentials: false, // optional depending on cookies
 });
 
