@@ -1,0 +1,173 @@
+.landing-container {
+  background: linear-gradient(to bottom right, #3498db, #8e44ad);
+  color: white;
+  min-height: 100vh;
+  padding: 2em;
+  text-align: center;
+}
+
+.landing-hero {
+  margin-bottom: 3em;
+}
+
+.landing-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+.landing-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5em;
+}
+
+.landing-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.landing-btn {
+  background: white;
+  color: #333;
+  padding: 0.75em 1.5em;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.landing-btn.primary {
+  background: #2ecc71;
+  color: white;
+}
+
+.landing-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.landing-section {
+  margin-top: 3em;
+}
+
+.landing-section h2 {
+  margin-bottom: 1em;
+  font-size: 1.8rem;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+
+.card {
+  background: white;
+  color: #333;
+  border-radius: 8px;
+  padding: 1em;
+  width: 250px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 0.5em;
+  object-fit: cover;
+}
+
+.resource-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5em;
+}
+
+/* Unique borders by category */
+.student-card {
+  border-left: 5px solid #1abc9c;
+}
+
+.tutor-card {
+  border-left: 5px solid #f39c12;
+}
+
+.resource-card {
+  border-left: 5px solid #9b59b6;
+}
+
+/* Contact Us section */
+.contact-section {
+  background: #1e1e2f;
+  color: white;
+  padding: 2em;
+  text-align: center;
+  margin-top: 4em;
+  border-top: 1px solid #444;
+}
+
+.contact-section p {
+  margin: 0.5em 0;
+  font-size: 1rem;
+}
+
+.social-icons a {
+  background-color: #333;
+  color: white;
+  padding: 0.6em;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #555;
+  transform: scale(1.1);
+}
+
+
+.contact-section footer {
+  margin-top: 2em;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.contact-email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  margin-top: 0.8em;
+  font-size: 1rem;
+}
+
+.contact-email a {
+  color: #61dafb;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-email a:hover {
+  color: #1abc9c;
+}
+
+.contact-icon {
+  font-size: 1.1rem;
+  color: #61dafb;
+}
+
+
